@@ -11,7 +11,7 @@ $(document).ready(function() {
             usedNumbers.push(randomNumber);
             var thumbnail = $("<div>", {
                 class: "netflix-thumbnail",
-                style: "background-image:url(/netflix/assets/images/samples/marco/" + randomNumber + ".png);format=auto;fit=cover;width=128;height=128;quality=25",
+                style: "background-image:url(/infinityavatarai/assets/images/samples/marco/" + randomNumber + ".png);format=auto;fit=cover;width=128;height=128;quality=25",
             });
             box.append(thumbnail);
         }
