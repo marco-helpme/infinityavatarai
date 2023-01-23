@@ -1,0 +1,33 @@
+html.screenshot,
+html.screenshot body {
+    height:512px;
+    width:1024px;
+    overflow:hidden !important;
+    transform:translateX(-50%) translateY(-50%) !important;
+    position:absolute;
+    top:50%;
+    left:50%;
+    padding:0 !important;
+}
+html.screenshot .netflix-container {
+    height:100% !important;
+    margin:0 !important;
+}
+html.screenshot .logo,
+html.screenshot .discount-banner,
+html.screenshot .netflix-container .centered-box div,
+html.screenshot .netflix-container .centered-box p {
+    display:none !important;
+}
+html.screenshot .netflix-container .centered-box {
+    top:50% !important;
+}
+html.screenshot .netflix-gradient {
+    background:rgba(0,0,0,0) !important;
+}
+html.screenshot .floating-buy-button-container {
+    display:none;
+}
+html.screenshot .by-levelsio {
+    display:none;
+}

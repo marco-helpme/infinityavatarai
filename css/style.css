@@ -1,0 +1,98 @@
+:root {
+    --global-background-color: #fbfaf8;
+    --global-text-color: #1c1c1c;
+    --global-link-color: #1c1c1c;
+    --global-border-color: #dddddd;
+}
+:root.dark {
+    --global-background-color: #111;
+    --global-text-color: #fff;
+    --global-link-color:#fff;
+    --global-border-color:#30363d;
+}
+html.dark ::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    background: #2c2c2c;
+}
+html.dark ::-webkit-scrollbar-thumb {
+    background: #6b6b6c;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+html.dark ::-webkit-scrollbar-corner {
+    background: #2c2c2c;
+}
+* {
+    box-sizing: border-box;
+}
+body,input,select,textarea,a {
+    color: var(--global-link-color);
+}
+body,input,select,textarea {
+    font-family: monospace;
+    font-family: -apple-system,"system-ui","Segoe UI",sans-serif;
+    background: var(--global-background-color);
+}
+input,select,textarea,.button {
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    font-size: 16px;
+    background: #161616;
+}
+input:focus,select:focus,textarea:focus {
+    outline: 2px solid #f47353;
+}
+body {
+    margin:0;
+    padding:0;
+    padding-bottom:100px;
+    background:var(--global-background-color);
+    color:var(--global-text-color);
+    text-align: center;
+    font-family: -apple-system,"system-ui","Segoe UI",sans-serif;
+    overflow-x:hidden;
+}
+.style_demo {
+    z-index:1;
+    position:relative;
+    text-align:center;
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+html.screenshot,
+html.screenshot body {
+    height:512px;
+    width:1024px;
+    overflow:hidden !important;
+    transform:translateX(-50%) translateY(-50%) !important;
+    position:absolute;
+    top:50%;
+    left:50%;
+    padding:0 !important;
+}
+html.screenshot .netflix-container {
+    height:100% !important;
+    margin:0 !important;
+}
+html.screenshot .logo,
+html.screenshot .discount-banner,
+html.screenshot .netflix-container .centered-box div,
+html.screenshot .netflix-container .centered-box p {
+    display:none !important;
+}
+html.screenshot .netflix-container .centered-box {
+    top:50% !important;
+}
+html.screenshot .netflix-gradient {
+    background:rgba(0,0,0,0) !important;
+}
+html.screenshot .floating-buy-button-container {
+    display:none;
+}
+html.screenshot .by-levelsio {
+    display:none;
+}

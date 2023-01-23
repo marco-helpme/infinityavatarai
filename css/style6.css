@@ -1,0 +1,225 @@
+.upload-studio {
+    width:100%;
+    max-width:1100px;
+    display:block;
+    margin:0 auto;
+    text-align: left;
+    margin-top:28px;
+}
+.upload-studio .left,
+.upload-studio .right {
+    padding:14px;
+}
+.upload-studio .left {
+    width:50%;
+    display:inline-block;
+    text-align: left;
+}
+.upload-studio .right {
+    width:50%;
+    display:inline-block;
+    text-align: left;
+    float:right;
+}
+.upload-studio .right .button.big {
+    width:calc(100% - 14px - 14px);
+}
+@media (max-width:1000px) {
+    .upload-studio .right {
+        margin-top:-28px;
+    }
+    .upload-studio .left,
+    .upload-studio .right {
+        width:100%;
+        display:block;
+        float:none;
+        text-align: left;
+    }
+}
+.button {
+    text-decoration: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    background: #fff;
+    border: 1px solid #fff;
+    font-weight: bold;
+    border-radius: 12px;
+    display: inline-block;
+    margin: 14px;
+    padding: 9px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    color: #000;
+}
+.button:hover {
+    background: none;
+    color: #fff;
+}
+.button:active {
+    opacity: 0.5;
+}
+.button.reverse {
+    background: none;
+    color: #fff;
+}
+.button.reverse:hover {
+    background: #fff;
+    color: #000;
+    opacity: 1;
+}
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.button.big.reverse:hover,
+.button.big {
+    background: -webkit-linear-gradient(45deg, #680aca, #ff897e);
+    background: linear-gradient(60deg,#f79533,#f37055,#ef4e7b,#a166ab,#5073b8,#1098ad,#07b39b,#6fba82);
+    -webkit-animation: animatedgradient 6s ease infinite alternate;
+    animation: animatedgradient 6s ease infinite alternate;
+    background-size: 300% 300%;
+    border: 1px solid rgba(0,0,0,0);
+    color: #fff;
+    padding-left: 14px;
+    padding-right: 14px;
+    font-size: 24px;
+    font-size: 22px;
+    padding: 21px;
+    padding: 28px;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+.button.big.reverse:hover {
+    opacity: 1;
+}
+
+.button.big.reverse,
+.button.big:hover {
+    border: 1px solid #fff;
+    background: none;
+}
+.photo-guidelines {
+    padding-left: 7px;
+    padding-right: 7px;
+    margin: 14px auto;
+    max-width: 800px;
+}
+.photo-guidelines div {
+    width:100px;
+    display:inline-block;
+    margin:7px;
+    vertical-align: top;
+    text-align: center;
+    font-size:12px;
+    width:calc(calc(100% - 14px - 14px - 14px - 14px - 14px) / 4);
+}
+.photo-guidelines img {
+    width:100%;
+    max-width:100px;
+    height:100px;
+    border-radius:12px;
+    background:#fff;
+    margin:0;
+}
+
+.hide-before-800px {
+    display: none;
+}
+
+.hide-before-600px-height {
+    display: block;
+}
+.hide-before-600px-height p {
+    font-size: 32px;
+}
+
+@media (max-height:800px) {
+    .hide-before-800px {
+        display:none;
+    }
+}
+@media (min-width:800px) {
+    .hide-after-800px {
+        display:none;
+    }
+}
+@media (max-height:600px) {
+    .hide-before-600px-height {
+        display:none;
+    }
+}
+@media (max-width:600px) {
+    .hide-before-600px {
+        display:none;
+    }
+}
+@media (max-width:400px) {
+    .hide-before-400px {
+        display:none;
+    }
+}
+@media (max-width:800px) {
+    .photo-guidelines div {
+        font-size:10px;
+    }
+    .photo-guidelines img {
+        max-width:75px;
+        height:75px;
+    }
+    .hide-before-800px {
+        display:none;
+    }
+}
+.start-pane {
+    text-align: left;
+}
+.image_viewer {
+    display: none;
+    border-radius: 12px;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    position: fixed;
+    z-index: 101;
+    left: 50%;
+    top: 45%;
+    min-width: 512px;
+    min-height: 768px;
+    max-width: 512px;
+    max-height: 768px;
+    object-fit: cover;
+    box-shadow: 0 0 0 1px var(--input-border-color), 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%);
+}
+@media (max-width:600px) {
+    .image_viewer {
+        width:100%;
+        height:100%;
+        min-width: 256px;
+        min-height: 256px;
+        max-width: 85vw;
+        max-height: 85vw;
+    }
+}
+.image_viewer_backdrop {
+    cursor: pointer;
+    position: fixed;
+    z-index: 100;
+    background: rgba(0,0,0,0.5);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(12px);
+}

@@ -1,0 +1,37 @@
+.floating-buy-button-container {
+    display: none;
+}
+
+.floating-buy-button-container {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    padding: 14px;
+    z-index: 101;
+    background: #111;
+    border-top: 1px solid var(--global-border-color);
+    padding-bottom: max(0.75rem,env(safe-area-inset-bottom));
+}
+
+.floating-buy-button-container .button {
+    margin: 0 auto;
+    display: block;
+    width: calc(100% - 14px);
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 16px;
+    background: -webkit-linear-gradient(
+            45deg
+            , #680aca, #ff897e);
+    background: linear-gradient(
+            60deg
+            ,#f79533,#f37055,#ef4e7b,#a166ab,#5073b8,#1098ad,#07b39b,#6fba82);
+    -webkit-animation: animatedgradient 6s ease infinite alternate;
+    animation: animatedgradient 6s ease infinite alternate;
+    background-size: 300% 300%;
+    border: 1px solid rgba(0,0,0,0);
+    color: #fff;
+    max-width: 512px;
+}
